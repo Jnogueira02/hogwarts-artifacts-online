@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/api/v1/artifacts")
+@RequestMapping("${api.endpoint.base-url}/artifacts")
 public class ArtifactController {
 
     private final ArtifactService artifactService;
@@ -37,7 +37,7 @@ public class ArtifactController {
     @GetMapping()
     public Result findAllArtifacts(){
         List<Artifact> foundArtifacts = this.artifactService.findAll();
-        // Convert foundArtifacts to list or artifactDtos
+        // Convert foundArtifacts to list of artifactDtos
         List<ArtifactDto> artifactDtos = foundArtifacts.stream()
                 .map(this.artifactToArtifactDtoConverter::convert)
                 .collect(Collectors.toList());
