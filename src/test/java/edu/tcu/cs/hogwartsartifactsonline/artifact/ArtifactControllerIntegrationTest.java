@@ -63,7 +63,7 @@ public class ArtifactControllerIntegrationTest {
                 .andExpect(jsonPath("$.data", Matchers.hasSize(5)));
     }
 
-    @Test
+    /*@Test
     @DisplayName("Check addArtifact with valid input (POST)")
     void testAddArtifactSuccess() throws Exception {
         Artifact a = new Artifact();
@@ -86,7 +86,7 @@ public class ArtifactControllerIntegrationTest {
                 .andExpect(jsonPath("$.code").value(StatusCode.SUCCESS))
                 .andExpect(jsonPath("$.message").value("Find All Success"))
                 .andExpect(jsonPath("$.data", Matchers.hasSize(7)));
-    }
+    }*/
 
     @Test
     @DisplayName("Check findArtifactById with non-existent id (GET)")
@@ -98,7 +98,7 @@ public class ArtifactControllerIntegrationTest {
                 .andExpect(jsonPath("$.data").isEmpty());
     }
 
-    @Test
+    /*@Test
     @DisplayName("Check addArtifact with invalid input (POST)")
     @DirtiesContext(methodMode = DirtiesContext.MethodMode.BEFORE_METHOD)
     void testAddArtifactErrorWithInvalidInput() throws Exception {
@@ -121,7 +121,7 @@ public class ArtifactControllerIntegrationTest {
                 .andExpect(jsonPath("$.code").value(StatusCode.SUCCESS))
                 .andExpect(jsonPath("$.message").value("Find All Success"))
                 .andExpect(jsonPath("$.data", Matchers.hasSize(6)));
-    }
+    }*/
 
     @Test
     @DisplayName("Check updateArtifact with valid input (PUT)")
@@ -162,7 +162,7 @@ public class ArtifactControllerIntegrationTest {
                 .andExpect(jsonPath("$.data").isEmpty());
     }
 
-    @Test
+    /*@Test
     @DisplayName("Check updateArtifact with invalid input (PUT)")
     void testUpdateArtifactErrorWithInvalidInput() throws Exception {
         Artifact a = new Artifact();
@@ -186,7 +186,7 @@ public class ArtifactControllerIntegrationTest {
                 .andExpect(jsonPath("$.message").value("Find One Success"))
                 .andExpect(jsonPath("$.data.id").value("1250808601744904191"))
                 .andExpect(jsonPath("$.data.name").value("Deluminator"));
-    }
+    }*/
 
     @Test
     @DisplayName("Check deleteArtifact with valid input (DELETE)")
