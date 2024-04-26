@@ -12,4 +12,3 @@ COPY --from=builder application/snapshot-dependencies/ ./
 COPY --from=builder application/application/ ./
 ENTRYPOINT ["java", "org.springframework.boot.loader.launch.JarLauncher"]
 # The JarLauncher class has been relocated to a new package since Spring Boot 3.2.0.
-#
