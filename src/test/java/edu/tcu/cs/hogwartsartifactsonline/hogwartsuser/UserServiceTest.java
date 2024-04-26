@@ -137,6 +137,7 @@ class UserServiceTest {
         newUser.setRoles("user");
 
         given(this.passwordEncoder.encode(newUser.getPassword())).willReturn("Encoded Password");
+        
         given(this.userRepository.save(newUser)).willReturn(newUser);
 
         // When

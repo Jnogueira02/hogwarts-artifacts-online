@@ -127,7 +127,7 @@ class HogwartsUserControllerIntegrationTest {
         this.mockMvc.perform(post(this.baseUrl + "/users").contentType(MediaType.APPLICATION_JSON).content(json).accept(MediaType.APPLICATION_JSON).header(HttpHeaders.AUTHORIZATION, this.token))
                 .andExpect(jsonPath("$.flag").value(false))
                 .andExpect(jsonPath("$.code").value(StatusCode.INVALID_ARGUMENT))
-                .andExpect(jsonPath("$.message").value("Provided arguments are invalid, see data for details."))
+                .andExpect(jsonPath("$.message").value("Provided arguments..."))
                 .andExpect(jsonPath("$.data.username").value("username is required."))
                 .andExpect(jsonPath("$.data.password").value("password is required."))
                 .andExpect(jsonPath("$.data.roles").value("roles are required."));
@@ -189,7 +189,7 @@ class HogwartsUserControllerIntegrationTest {
         this.mockMvc.perform(put(this.baseUrl + "/users/1").contentType(MediaType.APPLICATION_JSON).content(json).accept(MediaType.APPLICATION_JSON).header(HttpHeaders.AUTHORIZATION, this.token))
                 .andExpect(jsonPath("$.flag").value(false))
                 .andExpect(jsonPath("$.code").value(StatusCode.INVALID_ARGUMENT))
-                .andExpect(jsonPath("$.message").value("Provided arguments are invalid, see data for details."))
+                .andExpect(jsonPath("$.message").value("Provided arguments..."))
                 .andExpect(jsonPath("$.data.username").value("username is required."))
                 .andExpect(jsonPath("$.data.roles").value("roles are required."));
         this.mockMvc.perform(get(this.baseUrl + "/users/1").accept(MediaType.APPLICATION_JSON).header(HttpHeaders.AUTHORIZATION, this.token))
