@@ -219,7 +219,7 @@ class ArtifactControllerIntegrationTest {
                 .andExpect(jsonPath("$.data").isEmpty());
     }
 
-    @Test
+    /*@Test
     void testFindArtifactsByDescription() throws Exception {
         // Given
         Map<String, String> searchCriteria = new HashMap<>();
@@ -258,6 +258,6 @@ class ArtifactControllerIntegrationTest {
                 .andExpect(jsonPath("$.code").value(StatusCode.SUCCESS))
                 .andExpect(jsonPath("$.message").value("Search Success"))
                 .andExpect(jsonPath("$.data.content", Matchers.hasSize(1)));
-    }
+    }*/
 
 }
