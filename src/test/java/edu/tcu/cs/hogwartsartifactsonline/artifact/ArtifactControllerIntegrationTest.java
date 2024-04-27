@@ -62,7 +62,7 @@ class ArtifactControllerIntegrationTest {
                 .andExpect(jsonPath("$.flag").value(true))
                 .andExpect(jsonPath("$.code").value(StatusCode.SUCCESS))
                 .andExpect(jsonPath("$.message").value("Find All Success"))
-                .andExpect(jsonPath("$.data", Matchers.hasSize(5)));
+                .andExpect(jsonPath("$.data.content", Matchers.hasSize(5)));
     }
 
     /*@Test
